@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSR</title>
+    <link rel="icon" href="icon/shop.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+    #imageContainer img{
+        width: 100%;
+        height: 400px;
+    }
+    #imageContainer button{
+        width: 100%;
+        height: 45px;
+        display: flex;
+    }
+</style>
+<body>
+    <div class="container-fluid cf-hidden">
+        <div class="row">
+            <div class="col-3">
+                <a href="https://www.jaishreeradhey.in/node">
+                    <img src="icon/360_F_470538349_nRznOjUKRQ5S5YM0KgawtvmutZdBEBTG-removebg-preview.png" alt=""
+                        width="100%" height="200px">
+                </a>
+                <a href="index.html"><button type="button">
+                        <img src="icon/app.png" alt="">
+                        <span>All Images</span>
+                    </button></a>
+                <button class="active">
+                    <img src="icon/app.png" alt="">
+                    <span>Saved Img</span>
+                </button>
+            </div>
+            <div class="col-9">
+                <div class="site-name">
+                    <span>Jai shree radehy</span>
+                </div>
+                <div class="input">
+                    <span><img src="icon/search.png" alt=""></span>
+                    <input type="text" placeholder="search by Kurti name">
+                </div>
+                <div id="imageContainer" style=" width: 80%;
+                margin: 50px auto 50px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 40px;
+                text-align: center;">
+
+                </div>
+                <button class="pp" onclick="remove()">Remove</button>
+                <button class="pp" onclick="window.location.href='index.html'">PREVIOUS PAGE </button>
+            </div>
+            <div id="last">
+                <p>&copy;Jai Shree Radhey. All rights reserved.</p>
+                <p>BY <span><a href="https://github.com/kunalpatel196?tab=repositories">kp gurjar</a></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="loader">wellcome....</div>
+</body>
+<script>
+    window.addEventListener("load", () => {
+
+        const loader = document.querySelector(".loader");
+        loader.classList.add("loader-hidden");
+
+        const body = document.querySelector(".cf-hidden");
+        body.classList.remove("cf-hidden");
+        body.classList.add("cf");
+
+    });
+</script>
+<script>
+  const imgData = localStorage.getItem("imgsrc");
+
+if (imgData) {
+    const imgArray = JSON.parse(imgData); 
+    console.log(imgArray);
+
+    imgArray.forEach(element => {
+        let imgElement = document.createElement("img");
+        imgElement.src = element; 
+        document.getElementById("imageContainer").appendChild(imgElement); 
+
+    });
+} else {
+    confirm("No image data found in localStorage.");
+}
+
+</script>
+<script>
+    function remove(){
+        localStorage.removeItem("imgsrc");
+        window.location.href='index.html';
+        
+    }
+</script>
+
+</html>

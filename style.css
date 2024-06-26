@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+    box-sizing: border-box;
+}
+.col-3{
+    background-color: rgba(255, 105, 180, 0.234);
+    
+}
+.col-3  img{
+    text-align: center;
+    cursor: pointer;
+}
+.col-3 button{
+    width: 100%;
+    height: 45px;
+    margin-top: 50px;
+    border: 1px solid rgb(248, 17, 202);
+    transition: all;
+    border-radius: 15px;
+    outline: none;
+}
+.col-3 button span{
+    margin-left: 90px;
+    font-weight: 500;
+}
+.col-3 .active{
+    border-left: 10px solid rgb(248, 17, 202);
+}
+.site-name span{
+    font-family: 'Time';
+}
+.site-name{
+    letter-spacing: 4px;
+    font-size: 50px;
+    font-family: 'Poppins-Regular';
+    text-align: center;
+    color: #fff;
+    background: #D51F81;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 110px;
+    font-weight: 600;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+.input{
+    margin-top: 50px;
+    height: 40px;
+    box-shadow: 2px 4px 10px rgba(128, 128, 128, 0.33);
+}
+.input input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+.save{
+    background-color: #D51F81;
+    color: #fff;
+    height: 30px;
+   padding-left: 20px;
+   padding-top: 5px;
+}
+.save button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-align: right;
+}
+.cs4 {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    width: 93%;
+    opacity: 0;
+    text-align: center;
+    padding-top: 50%;
+    transition: .3s ease;
+    background-color: #00000082;
+    overflow: hidden;
+    margin-left: 12px;
+}
+#overlay img{
+    justify-content: space-between;
+  
+}
+
+.cs4:hover #overlay {
+    opacity: 1; 
+}
+#last{
+    text-align: center;
+    margin-top: 50px;
+    color: #161616b3;
+}
+#last span{
+    color: #D51F81;
+    font-weight: bold;
+}
+a{
+    text-decoration: none !important;
+    color: #D51F81 !important;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: opacity 10s, visibility 3s;
+    
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content:"";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #000000;
+    border-top-color: rgb(234, 24, 209);
+    border-radius: 50%;
+    animation: load 1s infinite ease;
+}
+
+@keyframes load{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+/* .derloa{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    transition: opacity 10s, visibility 3s;
+    
+}
+.derloa-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.derloa::after{
+    content:"";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #00000000;
+    border-top-color: rgb(234, 24, 209);
+    border-radius: 50%;
+    animation: load2 1s infinite ease;
+}
+
+@keyframes load2{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+} */
+.cf{
+    display: block;
+}
+
+.cf-hidden {
+    display: none;
+}
+
+.cc{
+    margin: auto;
+    padding:10px;
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    left: 120px;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    display: none;
+}
+.cc h1{
+    margin-top: 10px;
+    color: #D51F81;
+    margin-bottom: 50px;
+}
+.cc button{
+    width: 70px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin-left: 300px;
+    background-color: green;
+    color: #fff;
+   
+}
+.cc button:hover{
+    background-color: red;
+}
+.cc #img{
+    margin-top: 50px;
+}
+.save2:active{
+    color: rgb(255, 255, 255);
+    background-color: green;
+}
+.pp{
+    border: none;
+    outline: none;
+    background-color: #8EC5FC;
+    border-radius: 15px;
+    width: 40%;
+    height: 45px;
+   margin-left: 20%;
+   margin-top: 45px;
+}
+.lodm{
+    margin-top: 50px;
+    margin-left: 20%;
+    border: none;
+    outline: none;
+    background-color: rgb(196, 30, 113);
+    border-radius: 15px;
+    width: 50%;
+    height: 45px;
+    color: #fff;
+    position: relative;
+}
+.lodm:hover{
+    background-color: green;
+}
+.show{
+    display:block;
+}
+#overlay button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
