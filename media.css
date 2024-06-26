@@ -1,0 +1,70 @@
+@media only screen and (max-width: 600px) {
+    .col-3 {
+        flex: 0 0 auto;
+        width: 100% !important;
+        height: 300px;
+    }
+    .col-9 {
+        flex: 0 0 auto;
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    .col-3 button {
+        width: 47%;
+        height: 45px;
+        margin-top: 20px;
+        border: 1px solid rgb(248, 17, 202);
+        transition: all;
+        border-radius: 15px;
+        outline: none;
+        font-size: xx-small;
+    }
+    .col-3 button span {
+        margin-left: 0px; 
+        font-weight: 500;
+    }
+    .col-3 img {
+        text-align: start;
+        cursor: pointer;
+    }
+    .site-name {
+        display: none;
+    }
+    .input {
+        margin-top: 0px;
+        height: 40px;
+        width: 100%;
+    }
+    .col-4 {
+        flex: 0 0 auto;
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+    #overlay {
+        width: 100%;
+    }
+   .lodm {
+    margin-left: 26%;
+   
+}
+   #imageContainer{
+    width: 100% !important;
+   
+     grid-template-columns: none !important; 
+   
+    text-align: center
+   }
+   .pp {
+    margin-left: 26%;
+}
+.cc {
+    top: 10px !important;
+    left: 0px !important; 
+    width: 100% !important;
+   
+}
+.cc button {
+   
+    margin-left: 221px;
+}
+}
